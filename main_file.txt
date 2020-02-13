@@ -1,0 +1,10 @@
+sudo apt-get update && apt-get install unbound && systemctl disable systemd-resolved && systemctl stop systemd-resolved && nano /etc/NetworkManager/NetworkManager.conf
+
+#in main RIGHT UNDER add this string:
+#dns=unbound
+
+sudo systemctl enable unbound-resolvconf
+
+sudo systemctl enable unbound
+
+sudo reboot now
