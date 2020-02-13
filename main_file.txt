@@ -3,8 +3,6 @@ sudo apt-get update && apt-get install unbound && systemctl disable systemd-reso
 #in main RIGHT UNDER add this string:
 #dns=unbound
 
-sudo systemctl enable unbound-resolvconf
-
-sudo systemctl enable unbound
+sudo systemctl enable unbound-resolvconf && systemctl enable unbound
 
 sudo reboot now
